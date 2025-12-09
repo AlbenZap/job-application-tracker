@@ -1,0 +1,8 @@
+streamlit
+supabase
+pandas
+python-dateutil
+requests
+streamlit-searchbox
+streamlit-authenticator
+plotly

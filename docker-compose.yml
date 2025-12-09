@@ -1,0 +1,18 @@
+services:
+  streamlit:
+    build: .
+    container_name: job-tracker-app
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+      - ./.streamlit:/app/.streamlit
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    networks:
+      - job-tracker-network
+
+networks:
+  job-tracker-network:
+    driver: bridge

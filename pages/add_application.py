@@ -203,11 +203,11 @@ def show():
                     
                     if success:
                         action = "saved" if save_button else "added"
-                        st.success(f"Application {action} successfully!")
+                        icon = ":material/save:" if save_button else ":material/check_circle:"
+                        st.toast(f"Application {action} successfully!", icon=icon)
                         logger.info(f"Application created: {company_name} - {job_title} ({current_status})")
-                        st.balloons()
                         
-                        st.info(f"**{current_status}:** {job_title} at {company_name}")
+                        st.success(f":material/task_alt: **{current_status}:** {job_title} at {company_name}")
                     else:
                         st.error("Failed to create application")
                         logger.error("Application creation failed")

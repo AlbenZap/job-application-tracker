@@ -219,7 +219,7 @@ def show():
             status_data = [
                 {'Status': 'Saved', 'Applications': stats['by_status'].get('Saved', 0)},
                 {'Status': 'Applied', 'Applications': sankey_counts['applied']},
-                {'Status': 'Interviewing', 'Applications': sankey_counts['interviewing']},
+                {'Status': 'Interview', 'Applications': sankey_counts['interviewing']},
                 {'Status': 'Offer', 'Applications': sankey_counts['offer']},
                 {'Status': 'Rejected', 'Applications': sankey_counts['rejected']},
                 {'Status': 'Ghosted', 'Applications': sankey_counts['ghosted']}

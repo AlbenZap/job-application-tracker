@@ -160,6 +160,8 @@ def show():
             errors.append("Company name is required")
         if not job_title or not job_title.strip():
             errors.append("Job title is required")
+        if posted_date and status_date and posted_date > status_date:
+            errors.append("Job posted date cannot be after the application date")
         
         if errors:
             for error in errors:
